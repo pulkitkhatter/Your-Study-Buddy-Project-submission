@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".WalletActivity">
+
+    <!-- Image Slider -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/idViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Circle Indicator -->
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/idIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:ci_drawable="@drawable/indicator_black"
+        app:layout_constraintTop_toBottomOf="@id/idViewPager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- CardView Container -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/idIndicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Wallet Balance -->
+            <TextView
+                android:id="@+id/walletBalanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹5000"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Separator Line -->
+            <View
+                android:id="@+id/separatorLine"
+                android:layout_width="350dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Top-Up Wallet -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top-Up Wallet"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"/>
+
+            <!-- Amount Input -->
+            <EditText
+                android:id="@+id/amountEditText"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:hint=" Enter amount"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:background="@drawable/input_background"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Recommendation Label -->
+            <TextView
+                android:id="@+id/recommendationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommended"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Recommended Top-Up Amounts -->
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="300dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/topUp1000"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="₹1000"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:background="@drawable/button_outline"/>
+
+                <Button
+                    android:id="@+id/topUp1500"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="₹1500"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:background="@drawable/button_outline"
+                    />
+
+                <Button
+                    android:id="@+id/topUp2000"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="₹2000"
+                    android:background="@drawable/button_outline"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Process Top-Up Button -->
+            <Button
+                android:id="@+id/topUpButton"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#FF6200EE"
+                android:text="Proceed to Top-Up"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

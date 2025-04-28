@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "120124812973",
+    "project_id": "college-project-study",
+    "storage_bucket": "college-project-study.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120124812973:android:e636a949548a85a2ac2024",
+        "android_client_info": {
+          "package_name": "com.example.adminapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc3SZyJcS5aCsoYNT1gIYviNlFmNCkLEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120124812973:android:c0dc141a5daec5a8ac2024",
+        "android_client_info": {
+          "package_name": "com.example.pratice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc3SZyJcS5aCsoYNT1gIYviNlFmNCkLEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120124812973:android:14ccc44121ed1bddac2024",
+        "android_client_info": {
+          "package_name": "com.example.yourstudybuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc3SZyJcS5aCsoYNT1gIYviNlFmNCkLEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
