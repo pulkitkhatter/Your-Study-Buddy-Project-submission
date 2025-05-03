@@ -5,25 +5,44 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F7FA"
     tools:context=".StudentFormActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Student Registration"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/etStudentRegNo"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Registration Number"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/etStudentName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Full Name"
-        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintTop_toBottomOf="@id/etStudentRegNo"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,10 +51,13 @@
     <EditText
         android:id="@+id/etStudentEmail"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Email"
-        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
         android:layout_marginHorizontal="16dp"
+        android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@id/etStudentName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -43,23 +65,26 @@
     <EditText
         android:id="@+id/etStudentPhone"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Phone Number"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
         android:inputType="phone"
         android:digits="0123456789"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintTop_toBottomOf="@id/etStudentEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
     <EditText
         android:id="@+id/etStudentDepartment"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Department"
-        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintTop_toBottomOf="@id/etStudentPhone"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,11 +93,15 @@
     <Button
         android:id="@+id/btnSubmitStudent"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="Submit"
-        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#007BFF"
+        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintTop_toBottomOf="@id/etStudentDepartment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

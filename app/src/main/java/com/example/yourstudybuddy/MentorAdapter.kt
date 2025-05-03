@@ -18,7 +18,6 @@ import java.util.*
 class MentorAdapter(private val mentorList: MutableList<Mentor>) :
     RecyclerView.Adapter<MentorAdapter.MentorViewHolder>() {
 
-    private val random = Random()
     private val daysOfWeek = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
     private val currentDay = SimpleDateFormat("EEEE", Locale.getDefault()).format(Date())
     private val db = FirebaseFirestore.getInstance()
@@ -47,9 +46,8 @@ class MentorAdapter(private val mentorList: MutableList<Mentor>) :
         holder.nameTextView.text = mentor.name.ifEmpty { "Not Available" }
         holder.expertiseTextView.text = mentor.department.ifEmpty { "Not Available" }
 
-        // Generate random experience between 2-10 years
-        val experience = (random.nextInt(9) + 2).toString() + " years"
-        holder.experienceTextView.text = experience
+        // Use the experience value from the mentor object
+        holder.experienceTextView.text = mentor.experience ?: "5+ years of experience"
 
         holder.aboutTextView.text = mentor.about.ifEmpty { "Not Available" }
 

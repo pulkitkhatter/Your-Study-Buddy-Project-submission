@@ -37,7 +37,7 @@ class UpcomingSessionsAdapter(
         holder.mentorName.text = booking.mentorName
         holder.sessionDate.text = "Date: ${booking.sessionDate}"
         holder.sessionTime.text = "Time: ${booking.sessionTime}"
-        holder.sessionPrice.text = "Price: ₹${booking.sessionPrice}"
+        holder.sessionPrice.text = "Price: ₹${booking.price}"
 
         // Open Google Meet on Click
         holder.joinMeetingButton.setOnClickListener {

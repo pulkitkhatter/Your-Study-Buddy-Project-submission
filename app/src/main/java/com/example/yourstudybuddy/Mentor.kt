@@ -6,7 +6,8 @@ data class Mentor(
     var department: String = "",
     var about: String = "",
     var availability: Map<String, Any>? = null,
-    var price: String? = null
+    var price: String? = null,
+    var experience: String? = null
 ) {
     fun getFormattedName(): String {
         return name.replaceFirstChar { it.uppercase() }

@@ -2,54 +2,82 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="#F4F6F8"
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mentor Registration"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1E1E1E"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
         <EditText
             android:id="@+id/etMentorRegNo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:hint="Registration Number"
-            android:inputType="text" />
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etMentorName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:hint="Full Name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etMentorEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etMentorPhone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:hint="Phone Number"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/etMentorDepartment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:hint="Department (e.g., Computer Science, AI, Blockchain)"
-            android:inputType="text" />
+            android:inputType="text"
+            android:layout_marginBottom="24dp" />
 
         <Button
             android:id="@+id/btnSubmitMentor"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="Submit"
-            android:layout_marginTop="16dp" />
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#007BFF"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>
